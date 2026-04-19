@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Maya Hart",
+    "picture": "/friends/maya-hart.jpg",
+    "email": "maya.hart@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "travel buddy"],
+    "bio": "We met during our second year architecture studio and still swap trip ideas whenever one of us spots a cheap flight.",
+    "goal": 14,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 2,
+    "name": "Nina Patel",
+    "picture": "/friends/nina-patel.jpg",
+    "email": "nina.patel@outlook.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["work", "mentor"],
+    "bio": "Nina coached me through my first product internship and now we try to keep our monthly coffee catch-up alive.",
+    "goal": 14,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 3,
+    "name": "Omar Farouk",
+    "picture": "/friends/omar-farouk.jpg",
+    "email": "omar.farouk@yahoo.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["football", "neighbor"],
+    "bio": "Our friendship started with late-night rooftop football debates and turned into a standing Friday tea ritual.",
+    "goal": 10,
+    "next_due_date": "2026-04-24"
+  },
+  {
+    "id": 4,
+    "name": "Zoe Chen",
+    "picture": "/friends/zoe-chen.jpg",
+    "email": "zoe.chen@gmail.com",
+    "days_since_contact": 21,
+    "status": "overdue",
+    "tags": ["design", "close friend"],
+    "bio": "Zoe and I co-led a campus magazine team, and she is still the first person I text when I need honest feedback.",
+    "goal": 14,
+    "next_due_date": "2026-04-12"
+  },
+  {
+    "id": 5,
+    "name": "Alex Rivera",
+    "picture": "/friends/alex-rivera.jpg",
+    "email": "alex.rivera@icloud.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["startup", "gym"],
+    "bio": "We met at a founder meetup, bonded over morning workouts, and now trade check-ins on both business and life.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 6,
+    "name": "Liam Carter",
+    "picture": "/friends/liam-carter.jpg",
+    "email": "liam.carter@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["gaming", "childhood"],
+    "bio": "Liam has been around since school bus days, and our friendship somehow survived every console generation and every move.",
+    "goal": 14,
+    "next_due_date": "2026-04-30"
+  },
+  {
+    "id": 7,
+    "name": "Sofia Khan",
+    "picture": "/friends/sofia-khan.jpg",
+    "email": "sofia.khan@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["book club", "city friend"],
+    "bio": "Sofia runs the most dependable book club I know, and our long post-meeting walks are usually the best part of the month.",
+    "goal": 12,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 8,
+    "name": "Noah Bennett",
+    "picture": "/friends/noah-bennett.jpg",
+    "email": "noah.bennett@proton.me",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["photography", "weekend trips"],
+    "bio": "Noah is the friend who always has a camera in his bag and a plan for the next sunrise drive outside the city.",
+    "goal": 14,
+    "next_due_date": "2026-04-27"
+  }
+]
