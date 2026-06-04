@@ -1,0 +1,27 @@
+{
+  "name": "kazi-samin-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "daisyui": "^5.0.0",
+    "framer-motion": "^11.18.2",
+    "gsap": "^3.12.7",
+    "lenis": "^1.1.20",
+    "next": "^16.2.6",
+    "next-themes": "^0.4.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4"
+  }
+}
