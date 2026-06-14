@@ -11,7 +11,7 @@ const projects = [
     category: "Full Stack Doctor Appointment Platform",
     description:
       "MediCare is a modern full-stack healthcare appointment platform where users can explore doctors, book appointments, manage schedules, and maintain healthcare profiles through a clean and responsive dashboard system.",
-    tags: ["Next.js", "React.js", "Tailwind CSS", "DaisyUI", "Node.js", "Express.js", "MongoDB", "Better Auth"],
+    tags: ["Next.js", "React.js", "Tailwind CSS", "HeroUI", "DaisyUI", "Node.js", "Express.js", "MongoDB", "Better Auth"],
     features: [
       "Secure Authentication & Google Sign-In",
       "Doctor Listing & Search",
@@ -53,7 +53,7 @@ const projects = [
     category: "Modern E-Learning Platform",
     description:
       "SkillSphere is a modern e-learning platform designed for students and aspiring developers to explore premium courses, manage profiles, and follow structured learning paths through a futuristic and responsive user interface.",
-    tags: ["Next.js", "MongoDB", "Node.js", "Better Auth", "DaisyUI", "React.js", "Tailwind CSS", "Express.js"],
+    tags: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS", "Better Auth", "DaisyUI", "React.js", "Express.js"],
     features: [
       "Secure Authentication & Credentials Portal",
       "Trending Course Library & Search",
