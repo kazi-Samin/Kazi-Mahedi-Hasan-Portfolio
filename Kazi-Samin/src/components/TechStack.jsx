@@ -1,16 +1,50 @@
 import ScrollReveal from "./ScrollReveal";
 
-const techs = [
-  { icon: "html", label: "HTML5" },
-  { icon: "css", label: "CSS3" },
-  { icon: "javascript", label: "JS ES6+" },
-  { icon: "rebase_edit", label: "React.js" },
-  { icon: "cloud_sync", label: "Next.js" },
-  { icon: "palette", label: "Tailwind" },
-  { icon: "dns", label: "Node.js" },
-  { icon: "settings_ethernet", label: "Express" },
-  { icon: "storage", label: "MongoDB" },
-  { icon: "shield_person", label: "Auth.js" },
+const techCategories = [
+  {
+    category: "Frontend",
+    techs: [
+      { label: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { label: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+      { label: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { label: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { label: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { label: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { label: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
+      { label: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+      { label: "React Router", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" },
+    ],
+  },
+  {
+    category: "UI Libraries",
+    techs: [
+      { label: "HeroUI", icon: "https://heroui.com/apple-touch-icon.png" },
+      { label: "DaisyUI", icon: "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" },
+    ],
+  },
+  {
+    category: "Backend",
+    techs: [
+      { label: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { label: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { label: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { label: "Better Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" },
+      { label: "Stripe", icon: "https://cdn.brandfetch.io/idxAg10C0L/theme/dark/symbol.svg" },
+      { label: "Google OAuth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+      { label: "Axios", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" },
+    ],
+  },
+  {
+    category: "Tools & DevOps",
+    techs: [
+      { label: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+      { label: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+      { label: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+      { label: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
+      { label: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+      { label: "npm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
+    ],
+  },
 ];
 
 export default function TechStack() {
@@ -35,31 +69,46 @@ export default function TechStack() {
           </p>
         </ScrollReveal>
 
-        {/* Tech Grid */}
-        <ScrollReveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {techs.map(({ icon, label }) => (
-              <div
-                key={label}
-                className="glass-card p-6 rounded-2xl flex flex-col items-center gap-3
-                  group hover:border-[var(--color-primary)]/50 transition-all cursor-default"
-              >
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl
-                  bg-[var(--color-surface-container)] group-hover:scale-110 transition-transform">
-                  <span
-                    className="material-symbols-outlined text-[var(--color-primary)]"
-                    aria-hidden="true"
-                  >
-                    {icon}
-                  </span>
-                </div>
-                <span className="text-sm font-medium tracking-widest text-[var(--color-on-surface)]">
-                  {label}
+        {/* Tech Categories */}
+        <div className="flex flex-col gap-10">
+          {techCategories.map(({ category, techs }) => (
+            <ScrollReveal key={category}>
+              {/* Category Label */}
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-xs tracking-[0.25em] uppercase font-bold text-[var(--color-primary)]">
+                  {category}
                 </span>
+                <div className="flex-1 h-[1px] bg-[var(--color-outline-variant)]/30" />
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+
+              {/* Tech Grid */}
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-9 gap-4">
+                {techs.map(({ icon, label }) => (
+                  <div
+                    key={label}
+                    className="glass-card p-4 rounded-2xl flex flex-col items-center gap-3
+                      group hover:border-[var(--color-primary)]/50 transition-all cursor-default"
+                  >
+                    <div className="w-11 h-11 flex items-center justify-center rounded-xl
+                      bg-[var(--color-surface-container)] group-hover:scale-110 transition-transform p-2">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={icon}
+                        alt={label}
+                        width={36}
+                        height={36}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <span className="text-[11px] font-medium text-center leading-tight text-[var(--color-on-surface-variant)] group-hover:text-[var(--color-primary)] transition-colors">
+                      {label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   );
