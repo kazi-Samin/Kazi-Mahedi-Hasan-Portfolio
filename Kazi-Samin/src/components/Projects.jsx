@@ -11,7 +11,22 @@ const projects = [
     category: "Next-Generation Online Ticket Booking Platform",
     description:
       "TicketCore is a comprehensive, full-stack online ticket booking ecosystem connecting travel vendors with passengers. Provides a secure infrastructure for booking Bus, Train, Launch, and Flight tickets with real-time tracking and analytics dashboards.",
-    tags: ["Next.js", "React 19", "Tailwind CSS", "HeroUI", "Better Auth", "Node.js", "Express.js", "MongoDB", "Stripe", "Recharts"],
+    tags: [
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "React 19", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "HeroUI", icon: "https://heroui.com/apple-touch-icon.png" },
+      { name: "Better Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "Stripe", icon: "https://cdn.brandfetch.io/idxAg10C0L/theme/dark/symbol.svg" },
+      { name: "Recharts", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
+      { name: "Axios", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" },
+      { name: "Google OAuth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+      { name: "React Toastify", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    ],
     features: [
       "Role-Based Access Control (RBAC)",
       "Stripe Checkout Payment Gateway",
@@ -30,7 +45,17 @@ const projects = [
     category: "Full Stack Doctor Appointment Platform",
     description:
       "MediCare is a modern full-stack healthcare appointment platform where users can explore doctors, book appointments, manage schedules, and maintain healthcare profiles through a clean and responsive dashboard system.",
-    tags: ["Next.js", "React.js", "Tailwind CSS", "HeroUI", "DaisyUI", "Node.js", "Express.js", "MongoDB", "Better Auth"],
+    tags: [
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "HeroUI", icon: "https://heroui.com/apple-touch-icon.png" },
+      { name: "DaisyUI", icon: "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "Better Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" },
+    ],
     features: [
       "Secure Authentication & Sign-In",
       "Doctor Listing & Search Queries",
@@ -46,11 +71,47 @@ const projects = [
   },
   {
     number: "03",
+    title: "SkillSphere",
+    category: "Modern E-Learning Platform",
+    description:
+      "SkillSphere is a modern e-learning platform designed for students and aspiring developers to explore premium courses, manage profiles, and follow structured learning paths through a futuristic and responsive user interface.",
+    tags: [
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Better Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" },
+      { name: "DaisyUI", icon: "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" },
+      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+    ],
+    features: [
+      "Secure Authentication & Credentials Portal",
+      "Trending Course Library & Search",
+      "Dynamic Paths & Subject Guides",
+      "Student Management Profile Dashboard",
+    ],
+    image: "/skillsphere_preview.png",
+    glowColor: "#6366f1",
+    accentColor: "rgba(99,102,241,0.15)",
+    liveLink: "https://assignment-008-wine.vercel.app/",
+    githubLink: "https://github.com/kazi-Samin/Assignment-008",
+  },
+  {
+    number: "04",
     title: "DigiTools Platform",
     category: "Responsive Digital Product Platform",
     description:
       "DigiTools Platform is a responsive web application designed to help users explore and manage digital tools in a clean and organized interface with smooth browsing experiences and interactive product management features.",
-    tags: ["React.js", "React Router", "Tailwind CSS", "DaisyUI", "JavaScript ES6+", "React Toastify", "Vite"],
+    tags: [
+      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "React Router", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "DaisyUI", icon: "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "React Toastify", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" },
+    ],
     features: [
       "Interactive Cart & Add/Remove System",
       "Duplicate Prevention Logic",
@@ -63,25 +124,6 @@ const projects = [
     accentColor: "rgba(139,92,246,0.15)",
     liveLink: "https://digitoolsplatform06.netlify.app/",
     githubLink: "https://github.com/kazi-Samin/Assignment-06",
-  },
-  {
-    number: "04",
-    title: "SkillSphere",
-    category: "Modern E-Learning Platform",
-    description:
-      "SkillSphere is a modern e-learning platform designed for students and aspiring developers to explore premium courses, manage profiles, and follow structured learning paths through a futuristic and responsive user interface.",
-    tags: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS", "Better Auth", "DaisyUI", "React.js", "Express.js"],
-    features: [
-      "Secure Authentication & Credentials Portal",
-      "Trending Course Library & Search",
-      "Dynamic Paths & Subject Guides",
-      "Student Management Profile Dashboard",
-    ],
-    image: "/skillsphere_preview.png",
-    glowColor: "#6366f1",
-    accentColor: "rgba(99,102,241,0.15)",
-    liveLink: "https://assignment-008-wine.vercel.app/",
-    githubLink: "https://github.com/kazi-Samin/Assignment-008",
   },
 ];
 
@@ -136,8 +178,6 @@ function FeatureBadge({ text }) {
 }
 
 export default function Projects() {
-  const p1 = projects[0];
-  const secondaryProjects = projects.slice(1);
 
   return (
     <section
@@ -242,15 +282,17 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {/* Tech Badges */}
+                  {/* Tech Badges with Real Logos */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {proj.tags.map((tag) => (
                       <span
-                        key={tag}
-                        className="px-3 py-1 rounded-full text-xs font-semibold
+                        key={tag.name}
+                        className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
                           bg-[var(--color-surface-container)] border border-[var(--color-outline-variant)]/30 text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all cursor-default"
                       >
-                        {tag}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={tag.icon} alt={tag.name} width={14} height={14} className="flex-shrink-0" />
+                        {tag.name}
                       </span>
                     ))}
                   </div>
