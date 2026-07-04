@@ -22,52 +22,23 @@ export default function Contact({ onCopyEmail }) {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("sending");
-    try {
-      const res = await fetch("https://formsubmit.co/ajax/kazisamin0173@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject || "Portfolio Contact",
-          message: formData.message,
-          _subject: `[Portfolio] ${formData.subject || "New Message"} — from ${formData.name}`,
-          _captcha: "false",
-          _template: "table",
-          _autoresponse: `Hi ${formData.name}, thanks for reaching out! I'll get back to you soon. — Kazi Mahedi Hasan`,
-        }),
-      });
-      const data = await res.json();
-      if (data.success === "true" || data.success === true) {
-        setStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000);
-      } else {
-        // Fallback: open mailto with pre-filled content
-        setStatus("error");
-        setTimeout(() => {
-          const body = encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-          );
-          const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
-          window.open(`mailto:kazisamin0173@gmail.com?subject=${subject}&body=${body}`);
-          setStatus("idle");
-        }, 2000);
-      }
-    } catch {
-      setStatus("error");
-      setTimeout(() => {
-        const body = encodeURIComponent(
-          `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-        );
-        const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
-        window.open(`mailto:kazisamin0173@gmail.com?subject=${subject}&body=${body}`);
-        setStatus("idle");
-      }, 2000);
-    }
+    
+    // Fallback directly to mailto since FormSubmit requires activation
+    setTimeout(() => {
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+      );
+      const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
+      window.open(`mailto:kazisamin0173@gmail.com?subject=${subject}&body=${body}`);
+      
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      
+      setTimeout(() => setStatus("idle"), 5000);
+    }, 600);
   };
 
   const inputBase =
@@ -246,7 +217,7 @@ export default function Contact({ onCopyEmail }) {
                         className="flex items-center justify-center gap-2"
                       >
                         <span className="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
-                        Sending...
+                        Opening Email App...
                       </motion.span>
                     )}
                     {status === "success" && (
@@ -258,7 +229,7 @@ export default function Contact({ onCopyEmail }) {
                         className="flex items-center justify-center gap-2"
                       >
                         <span className="material-symbols-outlined text-[18px]">check_circle</span>
-                        Message Sent! I&apos;ll reply soon 🎉
+                        Draft Created! Please send it from your app 🎉
                       </motion.span>
                     )}
                     {status === "error" && (
@@ -269,8 +240,8 @@ export default function Contact({ onCopyEmail }) {
                         exit={{ opacity: 0, y: -8 }}
                         className="flex items-center justify-center gap-2"
                       >
-                        <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-                        Opening your email app as fallback...
+                        <span className="material-symbols-outlined text-[18px]">error</span>
+                        Failed to open app. Try emailing directly.
                       </motion.span>
                     )}
                   </AnimatePresence>
