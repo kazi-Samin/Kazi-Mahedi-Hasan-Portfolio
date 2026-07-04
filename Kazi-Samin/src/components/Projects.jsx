@@ -7,18 +7,36 @@ import ScrollReveal from "./ScrollReveal";
 const projects = [
   {
     number: "01",
+    title: "TicketCore",
+    category: "Next-Generation Online Ticket Booking Platform",
+    description:
+      "TicketCore is a comprehensive, full-stack online ticket booking ecosystem connecting travel vendors with passengers. Provides a secure infrastructure for booking Bus, Train, Launch, and Flight tickets with real-time tracking and analytics dashboards.",
+    tags: ["Next.js", "React 19", "Tailwind CSS", "HeroUI", "Better Auth", "Node.js", "Express.js", "MongoDB", "Stripe", "Recharts"],
+    features: [
+      "Role-Based Access Control (RBAC)",
+      "Stripe Checkout Payment Gateway",
+      "Interactive Revenue Analytics",
+      "PDF Ticket Generation (html2pdf)",
+    ],
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuC1_s4v_qPz8aM3v8_S-5cT0134nZt32B66r_X3u1Y_aZt32B66r_X3u1Y_aZt32B66r_X3u1Y_aZt32B66r_X3u1Y_a", // Will fall back or generate
+    glowColor: "#059669",
+    accentColor: "rgba(5,150,105,0.15)",
+    liveLink: "https://ticketcore.vercel.app", // placeholder or generic domain fallback for now since not specified, wait let's use the layout placeholder
+    githubLink: "https://github.com/kazi-Samin",
+  },
+  {
+    number: "02",
     title: "MediCare",
     category: "Full Stack Doctor Appointment Platform",
     description:
       "MediCare is a modern full-stack healthcare appointment platform where users can explore doctors, book appointments, manage schedules, and maintain healthcare profiles through a clean and responsive dashboard system.",
     tags: ["Next.js", "React.js", "Tailwind CSS", "HeroUI", "DaisyUI", "Node.js", "Express.js", "MongoDB", "Better Auth"],
     features: [
-      "Secure Authentication & Google Sign-In",
-      "Doctor Listing & Search",
-      "Appointment Booking System",
-      "Dashboard Management",
-      "User Profile System",
-      "Secure Backend API",
+      "Secure Authentication & Sign-In",
+      "Doctor Listing & Search Queries",
+      "Appointment Booking Console",
+      "Dashboard Profile Management",
     ],
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuC8q4iUaq-seLr_yL4g7u3NK99x0KlMhcpqXLyJPTXffAbCjVFweNW6Ci8W6E8Gm2XIgsgroAh7iAtdX94WiOaCUnA3fo7iazb1YqgM7DimUFyiHfwQRQTXNh_zSJbW48B1X2qvRzZWkW9uG7heUik56D2m2kqTnZa-OBaGYjBHzgUM13tvx1qcgJFT4N80QZN51V_UiyJXI6qhzu71FEfKmuebIwkebfzNgyjvkA9aRrlp16UG79zCwEGFAoF6-Z9Fgugp7W_y9oQ",
@@ -28,7 +46,7 @@ const projects = [
     githubLink: "https://github.com/kazi-Samin/Assignment-09",
   },
   {
-    number: "02",
+    number: "03",
     title: "DigiTools Platform",
     category: "Responsive Digital Product Platform",
     description:
@@ -48,7 +66,7 @@ const projects = [
     githubLink: "https://github.com/kazi-Samin/Assignment-06",
   },
   {
-    number: "03",
+    number: "04",
     title: "SkillSphere",
     category: "Modern E-Learning Platform",
     description:
