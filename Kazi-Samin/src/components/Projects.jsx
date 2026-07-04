@@ -21,8 +21,8 @@ const projects = [
     image: "/ticketcore_preview.png",
     glowColor: "#059669",
     accentColor: "rgba(5,150,105,0.15)",
-    liveLink: "https://ticketcore.vercel.app", // placeholder or generic domain fallback for now since not specified, wait let's use the layout placeholder
-    githubLink: "https://github.com/kazi-Samin",
+    liveLink: "https://online-ticket-booking-platform-gamma.vercel.app/",
+    githubLink: "https://github.com/kazi-Samin/online-ticket-booking-platform",
   },
   {
     number: "02",
@@ -162,188 +162,105 @@ export default function Projects() {
         </p>
       </ScrollReveal>
 
-      {/* Bento Grid Container */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        {/* ── PROJECT 01 (FEATURED WIDE CARD) ── */}
-        <div className="lg:col-span-12">
-          <ScrollReveal>
-            <div
-              className="relative overflow-hidden rounded-[2.5rem] border border-white/10 glass-card p-6 md:p-10 lg:p-12 group flex flex-col lg:flex-row gap-8 lg:gap-12 items-center transition-all duration-500 hover:border-white/20"
-              style={{
-                background: "linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%)",
-              }}
-            >
-              {/* Background Glow */}
+      {/* Vertical Stack (1 After 1) Container */}
+      <div className="flex flex-col gap-12">
+        {projects.map((proj, idx) => {
+          const isEven = idx % 2 === 0;
+          return (
+            <ScrollReveal key={proj.title}>
               <div
-                className="absolute -right-20 -bottom-20 w-[400px] h-[400px] blur-[120px] rounded-full opacity-20 pointer-events-none group-hover:opacity-40 transition-opacity duration-700"
-                style={{ backgroundColor: p1.glowColor }}
-              />
-
-              {/* Number Overlay */}
-              <div className="absolute top-4 right-8 select-none pointer-events-none font-playfair italic text-8xl md:text-[140px] text-white/5 font-black leading-none">
-                {p1.number}
-              </div>
-
-              {/* Image Half */}
-              <div className="w-full lg:w-[50%] relative aspect-video overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
-                <Image
-                  src={p1.image}
-                  alt={`${p1.title} — ${p1.category}`}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                />
-                
-                {/* Float tag */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span
-                    className="text-[10px] tracking-[0.25em] uppercase font-bold px-3.5 py-1.5 rounded-full"
-                    style={{
-                      backgroundColor: p1.accentColor,
-                      color: p1.glowColor,
-                      backdropFilter: "blur(8px)",
-                      border: `1px solid ${p1.glowColor}40`,
-                    }}
-                  >
-                    Featured Product
-                  </span>
-                </div>
-              </div>
-
-              {/* Content Half */}
-              <div className="w-full lg:w-[50%] flex flex-col justify-center space-y-4">
-                <span className="text-[11px] tracking-[0.25em] uppercase font-bold" style={{ color: p1.glowColor }}>
-                  {p1.category}
-                </span>
-                
-                <h3 className="text-3xl md:text-4xl font-light text-[var(--color-on-surface)] leading-tight">
-                  {p1.title}
-                </h3>
-
-                <p className="text-sm md:text-base text-[var(--color-on-surface-variant)] leading-relaxed">
-                  {p1.description}
-                </p>
-
-                {/* Vertical Line Details */}
-                <div className="border-l-2 border-[var(--color-outline-variant)]/30 pl-4 py-1 space-y-1">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1">
-                    {p1.features.slice(0, 4).map((feat) => (
-                      <FeatureBadge key={feat} text={feat} />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Tech Badges */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {p1.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-semibold
-                        bg-[var(--color-surface-container)] border border-[var(--color-outline-variant)]/30 text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all cursor-default"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <ProjectLinks liveLink={p1.liveLink} githubLink={p1.githubLink} glowColor={p1.glowColor} />
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-
-        {/* ── PROJECTS 02 & 03 (SPLIT GRID CARDS) ── */}
-        {secondaryProjects.map((proj) => (
-          <div key={proj.title} className="col-span-1 lg:col-span-6">
-            <ScrollReveal className="h-full">
-              <div
-                className="relative overflow-hidden rounded-[2.5rem] border border-white/10 glass-card p-6 md:p-8 group flex flex-col justify-between h-full transition-all duration-500 hover:border-white/20"
+                className="relative overflow-hidden rounded-[2.5rem] border border-white/10 glass-card p-6 md:p-10 lg:p-12 group flex flex-col lg:flex-row gap-8 lg:gap-12 items-center transition-all duration-500 hover:border-white/20"
                 style={{
                   background: "linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%)",
                 }}
               >
                 {/* Background Glow */}
                 <div
-                  className="absolute -right-16 -bottom-16 w-[300px] h-[300px] blur-[100px] rounded-full opacity-15 pointer-events-none group-hover:opacity-30 transition-opacity duration-700"
+                  className="absolute -right-20 -bottom-20 w-[400px] h-[400px] blur-[120px] rounded-full opacity-20 pointer-events-none group-hover:opacity-40 transition-opacity duration-700"
                   style={{ backgroundColor: proj.glowColor }}
                 />
 
                 {/* Number Overlay */}
-                <div className="absolute top-4 right-6 select-none pointer-events-none font-playfair italic text-7xl md:text-8xl text-white/5 font-black leading-none">
+                <div className="absolute top-4 right-8 select-none pointer-events-none font-playfair italic text-8xl md:text-[140px] text-white/5 font-black leading-none">
                   {proj.number}
                 </div>
 
-                <div className="space-y-6">
-                  {/* Image Container */}
-                  <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg">
-                    <Image
-                      src={proj.image}
-                      alt={`${proj.title} — ${proj.category}`}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 30vw"
-                      className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                    />
-                    
-                    <div className="absolute top-3 left-3 z-10">
-                      <span
-                        className="text-[9px] tracking-[0.2em] uppercase font-bold px-3 py-1 rounded-full"
-                        style={{
-                          backgroundColor: proj.accentColor,
-                          color: proj.glowColor,
-                          backdropFilter: "blur(6px)",
-                          border: `1px solid ${proj.glowColor}30`,
-                        }}
-                      >
-                        Case Study
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Info */}
-                  <div className="space-y-3">
-                    <span className="text-[10px] tracking-[0.2em] uppercase font-bold block" style={{ color: proj.glowColor }}>
-                      {proj.category}
+                {/* Image Section (Alternating Left/Right) */}
+                <div 
+                  className={`w-full lg:w-[50%] relative aspect-video overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl ${
+                    isEven ? "lg:order-1" : "lg:order-2"
+                  }`}
+                >
+                  <Image
+                    src={proj.image}
+                    alt={`${proj.title} — ${proj.category}`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                  />
+                  
+                  {/* Float tag */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span
+                      className="text-[10px] tracking-[0.25em] uppercase font-bold px-3.5 py-1.5 rounded-full"
+                      style={{
+                        backgroundColor: proj.accentColor,
+                        color: proj.glowColor,
+                        backdropFilter: "blur(8px)",
+                        border: `1px solid ${proj.glowColor}40`,
+                      }}
+                    >
+                      {idx === 0 ? "Featured Product" : "Featured Case Study"}
                     </span>
-                    
-                    <h3 className="text-2xl font-light text-[var(--color-on-surface)] leading-tight">
-                      {proj.title}
-                    </h3>
-
-                    <p className="text-sm text-[var(--color-on-surface-variant)] leading-relaxed min-h-[72px]">
-                      {proj.description}
-                    </p>
-
-                    {/* Features Detail Grid (4 Points) */}
-                    <div className="border-l-2 border-[var(--color-outline-variant)]/30 pl-4 py-1 mt-4 space-y-1">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1">
-                        {proj.features.slice(0, 4).map((feat) => (
-                          <FeatureBadge key={feat} text={feat} />
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Tech Badges */}
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {proj.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold
-                            bg-[var(--color-surface-container)] border border-[var(--color-outline-variant)]/30 text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all cursor-default"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
 
-                <ProjectLinks liveLink={proj.liveLink} githubLink={proj.githubLink} glowColor={proj.glowColor} />
+                {/* Content Section (Alternating Left/Right) */}
+                <div 
+                  className={`w-full lg:w-[50%] flex flex-col justify-center space-y-4 ${
+                    isEven ? "lg:order-2" : "lg:order-1"
+                  }`}
+                >
+                  <span className="text-[11px] tracking-[0.25em] uppercase font-bold" style={{ color: proj.glowColor }}>
+                    {proj.category}
+                  </span>
+                  
+                  <h3 className="text-3xl md:text-4xl font-light text-[var(--color-on-surface)] leading-tight">
+                    {proj.title}
+                  </h3>
+
+                  <p className="text-sm md:text-base text-[var(--color-on-surface-variant)] leading-relaxed">
+                    {proj.description}
+                  </p>
+
+                  {/* Vertical Line Details (4 Points) */}
+                  <div className="border-l-2 border-[var(--color-outline-variant)]/30 pl-4 py-1 space-y-1">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1">
+                      {proj.features.slice(0, 4).map((feat) => (
+                        <FeatureBadge key={feat} text={feat} />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tech Badges */}
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {proj.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full text-xs font-semibold
+                          bg-[var(--color-surface-container)] border border-[var(--color-outline-variant)]/30 text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-all cursor-default"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <ProjectLinks liveLink={proj.liveLink} githubLink={proj.githubLink} glowColor={proj.glowColor} />
+                </div>
               </div>
             </ScrollReveal>
-          </div>
-        ))}
-
+          );
+        })}
       </div>
     </section>
   );
