@@ -18,7 +18,7 @@ const techCategories = [
   {
     category: "UI Libraries",
     techs: [
-      { label: "HeroUI", icon: "https://heroui.com/apple-touch-icon.png" },
+      { label: "HeroUI", icon: "https://avatars.githubusercontent.com/u/86160567?s=64&v=4" },
       { label: "DaisyUI", icon: "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" },
     ],
   },
