@@ -18,8 +18,7 @@ const projects = [
       "Interactive Revenue Analytics",
       "PDF Ticket Generation (html2pdf)",
     ],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC1_s4v_qPz8aM3v8_S-5cT0134nZt32B66r_X3u1Y_aZt32B66r_X3u1Y_aZt32B66r_X3u1Y_aZt32B66r_X3u1Y_a", // Will fall back or generate
+    image: "/ticketcore_preview.png",
     glowColor: "#059669",
     accentColor: "rgba(5,150,105,0.15)",
     liveLink: "https://ticketcore.vercel.app", // placeholder or generic domain fallback for now since not specified, wait let's use the layout placeholder
@@ -78,8 +77,7 @@ const projects = [
       "Dynamic Paths & Subject Guides",
       "Student Management Profile Dashboard",
     ],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA6CWTHO6UDN-6osyROzvg-6TV7Pt1ZBwTrtAPnDNyoTC-NIFJF9y-3blb1WbH_iDLSIieipP2plWBdoFjHyCZVOd0VFXRaUSmshV9oEQuQwcut6zWhURwVRTs-xT-g_ELcsTZWAGCxk2hsSjkzxbK8K-29RSw9Lp1SxyQ7mzAsGbsJtsF0LxRYidiFbS_FhQz_GVUX0Vt3iJaBVqmceKtDnSDQPEe5bVItl_QRm42H8t9OMqyTgcG90LaV5VBkHmTTu0U-j0s_qHY",
+    image: "/skillsphere_preview.png",
     glowColor: "#6366f1",
     accentColor: "rgba(99,102,241,0.15)",
     liveLink: "https://assignment-008-wine.vercel.app/",
