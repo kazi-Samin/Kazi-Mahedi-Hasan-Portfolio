@@ -37,6 +37,7 @@ export default function Contact({ onCopyEmail }) {
           _subject: `[Portfolio] ${formData.subject || "New Message"} — from ${formData.name}`,
           _captcha: "false",
           _template: "table",
+          _autoresponse: `Hi ${formData.name}, thanks for reaching out! I'll get back to you soon. — Kazi Mahedi Hasan`,
         }),
       });
       const data = await res.json();
@@ -45,12 +46,27 @@ export default function Contact({ onCopyEmail }) {
         setFormData({ name: "", email: "", subject: "", message: "" });
         setTimeout(() => setStatus("idle"), 5000);
       } else {
+        // Fallback: open mailto with pre-filled content
         setStatus("error");
-        setTimeout(() => setStatus("idle"), 4000);
+        setTimeout(() => {
+          const body = encodeURIComponent(
+            `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+          );
+          const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
+          window.open(`mailto:kazisamin0173@gmail.com?subject=${subject}&body=${body}`);
+          setStatus("idle");
+        }, 2000);
       }
     } catch {
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 4000);
+      setTimeout(() => {
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+        );
+        const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
+        window.open(`mailto:kazisamin0173@gmail.com?subject=${subject}&body=${body}`);
+        setStatus("idle");
+      }, 2000);
     }
   };
 
@@ -253,8 +269,8 @@ export default function Contact({ onCopyEmail }) {
                         exit={{ opacity: 0, y: -8 }}
                         className="flex items-center justify-center gap-2"
                       >
-                        <span className="material-symbols-outlined text-[18px]">error</span>
-                        Failed to send. Try emailing directly.
+                        <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+                        Opening your email app as fallback...
                       </motion.span>
                     )}
                   </AnimatePresence>
