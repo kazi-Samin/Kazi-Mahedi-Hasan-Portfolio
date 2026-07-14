@@ -41,6 +41,36 @@ const projects = [
   },
   {
     number: "02",
+    title: "BookVerse",
+    category: "A Premium Book Discovery & Reading Platform",
+    description:
+      "BookVerse is a beautifully designed, modern web application that allows users to explore, discover, and purchase books seamlessly. Built with a focus on rich aesthetics, dynamic user experience, and robust performance.",
+    tags: [
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Lucide Icons", icon: "https://avatars.githubusercontent.com/u/108553255?s=64&v=4" },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "Better Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" },
+      { name: "Stripe", icon: "https://cdn.brandfetch.io/idxAg10C0L/theme/dark/symbol.svg" },
+    ],
+    features: [
+      "Stunning UI/UX with Glassmorphism",
+      "Dynamic Book Discovery & Filtering",
+      "Secure Stripe Payment Checkout",
+      "Dashboard Profile Management",
+    ],
+    image: "/bookverse_preview.png",
+    glowColor: "#2563eb",
+    accentColor: "rgba(37,99,235,0.15)",
+    liveLink: "https://book-verse-lyart.vercel.app/",
+    githubLink: "https://github.com/kazi-Samin/Book-Verse",
+  },
+  {
+    number: "03",
     title: "MediCare",
     category: "Full Stack Doctor Appointment Platform",
     description:
@@ -70,7 +100,7 @@ const projects = [
     githubLink: "https://github.com/kazi-Samin/Assignment-09",
   },
   {
-    number: "03",
+    number: "04",
     title: "SkillSphere",
     category: "Modern E-Learning Platform",
     description:
@@ -98,7 +128,7 @@ const projects = [
     githubLink: "https://github.com/kazi-Samin/Assignment-008",
   },
   {
-    number: "04",
+    number: "05",
     title: "DigiTools Platform",
     category: "Responsive Digital Product Platform",
     description:
