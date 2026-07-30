@@ -168,7 +168,7 @@ export default function Hero() {
 
             <MagneticButton strength={0.15}>
               <motion.a
-                href="https://drive.google.com/file/d/1RcZYCLPVtxZX-wD5s3IxUkpvEgY_CTeR/view?usp=sharing"
+                href="https://drive.google.com/file/d/1fyJ6-vEeSY3i6-gI-jcOBgMVIxTW3O3g/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, backgroundColor: "var(--color-surface-container)" }}
