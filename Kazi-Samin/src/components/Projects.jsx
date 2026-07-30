@@ -38,7 +38,6 @@ const projects = [
     accentColor: "rgba(5,150,105,0.15)",
     liveLink: "https://online-ticket-booking-platform-gamma.vercel.app/",
     githubLink: "https://github.com/kazi-Samin/online-ticket-booking-platform",
-    serverRepo: "https://github.com/kazi-Samin/online-booking-ticket-server",
   },
   {
     number: "02",
@@ -69,7 +68,6 @@ const projects = [
     accentColor: "rgba(37,99,235,0.15)",
     liveLink: "https://book-verse-lyart.vercel.app/",
     githubLink: "https://github.com/kazi-Samin/Book-Verse",
-    serverRepo: "https://github.com/kazi-Samin/Book-Verse-Server",
   },
   {
     number: "03",
@@ -100,7 +98,6 @@ const projects = [
     accentColor: "rgba(16,185,129,0.15)",
     liveLink: "https://assignment-09-kappa.vercel.app/home",
     githubLink: "https://github.com/kazi-Samin/Assignment-09",
-    serverRepo: "https://github.com/kazi-Samin/docAppoint-server",
   },
   {
     number: "04",
@@ -160,7 +157,7 @@ const projects = [
   },
 ];
 
-function ProjectLinks({ liveLink, githubLink, glowColor, serverRepo }) {
+function ProjectLinks({ liveLink, githubLink, glowColor }) {
   return (
     <div className="flex flex-wrap gap-3 pt-4">
       <motion.a
@@ -194,22 +191,6 @@ function ProjectLinks({ liveLink, githubLink, glowColor, serverRepo }) {
         </span>
         GitHub Repo
       </motion.a>
-      {serverRepo && (
-        <motion.a
-          href={serverRepo}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.08)" }}
-          whileTap={{ scale: 0.95 }}
-          className="group/btn flex items-center gap-2 glass-card px-6 py-2.5 rounded-xl
-              text-[var(--color-on-surface)] text-sm font-semibold transition-all border border-[var(--color-outline-variant)]/30"
-        >
-          <span className="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">
-            dns
-          </span>
-          Server Repo
-        </motion.a>
-      )}
     </div>
   );
 }
@@ -346,7 +327,7 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <ProjectLinks liveLink={proj.liveLink} githubLink={proj.githubLink} glowColor={proj.glowColor} serverRepo={proj.serverRepo} />
+                  <ProjectLinks liveLink={proj.liveLink} githubLink={proj.githubLink} glowColor={proj.glowColor} />
                 </div>
               </div>
             </ScrollReveal>
