@@ -9,12 +9,12 @@ export default function Contact({ onCopyEmail }) {
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
   const [focusedField, setFocusedField] = useState(null);
 
-  const handleCopy = async () => {
+  const handleCopy = async (text) => {
     try {
-      await navigator.clipboard.writeText("kazisamin0173@gmail.com");
+      await navigator.clipboard.writeText(text || "kazisamin0173@gmail.com");
       onCopyEmail();
     } catch (err) {
-      console.error("Failed to copy email:", err);
+      console.error("Failed to copy:", err);
     }
   };
 
@@ -279,10 +279,42 @@ export default function Contact({ onCopyEmail }) {
               </div>
               <div className="flex gap-2 flex-shrink-0">
                 <button
-                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleCopy(); }}
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleCopy("kazisamin0173@gmail.com"); }}
                   className="p-2 rounded-xl border border-[var(--color-outline-variant)]/30 text-[var(--color-on-surface-variant)]
                     hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]/40 transition-all"
                   title="Copy email"
+                >
+                  <span className="material-symbols-outlined text-[16px]">content_copy</span>
+                </button>
+              </div>
+            </a>
+
+            {/* Phone / WhatsApp Card */}
+            <a
+              href="tel:+8801845511413"
+              className="group relative glass-card p-7 rounded-[2rem] flex items-center gap-5
+                transition-all duration-500 hover:-translate-y-1
+                hover:shadow-[0_12px_32px_rgba(37,211,102,0.15)] overflow-hidden cursor-pointer"
+            >
+              <div className="absolute inset-0 bg-[#25D366]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-14 h-14 rounded-2xl bg-[var(--color-surface-container)] flex-shrink-0
+                flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined text-[#25D366] text-2xl">call</span>
+              </div>
+              <div className="flex-1 min-w-0">
+                <span className="text-[10px] tracking-widest uppercase font-bold text-[var(--color-on-surface-variant)] block mb-1">
+                  Phone & WhatsApp
+                </span>
+                <span className="text-sm font-semibold text-[var(--color-on-surface)] group-hover:text-[#25D366] transition-colors truncate block">
+                  +8801845511413
+                </span>
+              </div>
+              <div className="flex gap-2 flex-shrink-0">
+                <button
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleCopy("+8801845511413"); }}
+                  className="p-2 rounded-xl border border-[var(--color-outline-variant)]/30 text-[var(--color-on-surface-variant)]
+                    hover:text-[#25D366] hover:border-[#25D366]/40 transition-all"
+                  title="Copy number"
                 >
                   <span className="material-symbols-outlined text-[16px]">content_copy</span>
                 </button>
